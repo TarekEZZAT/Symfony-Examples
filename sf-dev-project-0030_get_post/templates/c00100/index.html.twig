@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Hello
+        </title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% block title %}
+            <h1>
+                Hello from
+                {{city_name}}
+            </h1>
+        {% endblock %}
+
+
+        {% block body %}
+            Cookie :
+            {{ app.request.cookies.get('time_cookie') }}
+
+            {%for user in users%}
+                <li>
+                    {{user}}
+                    won
+                    {{random_gift[loop.index0]}}
+                </li>
+                {%endfor%}
+            {% endblock %}
+            {% block javascripts %}{% endblock %}
+        </body>
+    </html>

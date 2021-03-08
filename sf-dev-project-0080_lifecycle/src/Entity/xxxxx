@@ -1,0 +1,9 @@
+    /**
+     * @ORM\Column(name="createdAt", type="datetime", nullable=true)
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(name="updatedAt", type="datetime", nullable=true)
+     */
+    private $updatedAt;

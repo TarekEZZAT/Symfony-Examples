@@ -1,0 +1,3 @@
+assets function must be installed
+
+composer require symfony/asset

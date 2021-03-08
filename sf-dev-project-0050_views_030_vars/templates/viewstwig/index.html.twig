@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ViewsController!
+{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px / 1.5 sans-serif;
+        }
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+        .odd{
+            color:blue
+        }
+        .even{
+            color:red
+        }
+    </style>
+
+    <div class="example-wrapper">
+        <h1>Hello
+            {{ controller_name }}! ✅</h1>
+        <h1>Hello
+            {{ controller_name|upper }}! ✅</h1>
+        <h2>
+            Using set and for tags
+        </h2>
+
+        {% set users = [{name:'Peter'},{name:'Mary'},{name:'Albert'},{name:'Suzan'}] %}
+
+        {% for user in users %}
+            <p>{{user.name}}<p>
+                {% endfor %}
+
+                {% for user in users  if user.name == 'Suzanx' %}
+                    <p>{{user.name}}<p>
+                        {% else %}
+                            No user found !
+                        {% endfor %}
+                        <BR>
+
+<p> evn/odd </p>
+{% for i in 0..10 %}
+    <div
+        class="{{ cycle(['even', 'odd'], i) }}">
+        {{i}}
+    </div>
+{% endfor %}
+
+
+
+
+{{ include ('includes/subview.html.twig', {'users':users})}}
+
+
+<BR>
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at
+            <code>
+                <a href="{{ 'G:/USERS/Public/TRAINING-MODULES/Symfony/00100_installation_020_dev/sy-dev-project-0050_views_010/src/Controller/ViewsController.php'|file_link(0) }}">src/Controller/ViewsController.php</a>
+            </code>
+        </li>
+        <li>Your template at
+            <code>
+                <a href="{{ 'G:/USERS/Public/TRAINING-MODULES/Symfony/00100_installation_020_dev/sy-dev-project-0050_views_010/templates/views/index.html.twig'|file_link(0) }}">templates/views/index.html.twig</a>
+            </code>
+        </li>
+    </ul>
+
+{% endblock %}
+
+{%block javascripts %}
+{{parent()}}
+
+<script>
+
+    alert ("Hello from index.html.twig!");
+</script>
+{% endblock %}
+
+

@@ -1,0 +1,12 @@
+composer require orm-fixture --dev
+bin/console list doctrine  # (list all doctrine commands)
+
+bin/console doctrine:schema:drop -n -q --force --full-database &&
+rm src/Migrations/*.php &&
+bin/console make:migration &&
+bin/console doctrine:migrations:migrate -n -q
+
+
+If you want to load fixtures, add to the above:
+
+&& bin/console doctrine:fixtures:load -n -q

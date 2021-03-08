@@ -1,0 +1,4 @@
+To use queries with parameters conversion, 
+we need frame-extra-bundle
+
+composer require sensio/framework-extra-bundle

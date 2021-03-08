@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AppvarsController!
+{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px / 1.5 sans-serif;
+        }
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
+
+    <div class="example-wrapper">
+        <h1>Hello
+            {{ controller_name }}! ✅</h1>
+
+        <h1>Application variales</h1>
+        <p>** must install security bundle **</p>
+        <p>composer require symfony/security-bundle</p>
+
+        <p>app.user          :
+            {{app.user}}
+        </p>
+        <p>** Add to url (?param=123)**</p>
+        <p>app.request.get('param')           :
+            {{app.request.get('param')}}
+        </p>
+<p>app.environment          :
+{{app.environment}}
+
+</p>
+
+<p>app.session          :
+    {{dump(app.session)}}
+</p>
+
+
+
+        This friendly message is coming from:
+        <ul>
+            <li>Your controller at
+                <code>
+                    <a href="{{ 'G:/USERS/Public/TRAINING-MODULES/Symfony/00100_installation_020_dev/sy-dev-project-0050_views_030_vars/src/Controller/AppvarsController.php'|file_link(0) }}">src/Controller/AppvarsController.php</a>
+                </code>
+            </li>
+            <li>Your template at
+                <code>
+                    <a href="{{ 'G:/USERS/Public/TRAINING-MODULES/Symfony/00100_installation_020_dev/sy-dev-project-0050_views_030_vars/templates/appvars/index.html.twig'|file_link(0) }}">templates/appvars/index.html.twig</a>
+                </code>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+

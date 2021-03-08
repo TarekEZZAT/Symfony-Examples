@@ -1,0 +1,4 @@
+Added a checkbox not related to Video antity
+to confirm sendin the form
+
+Modify the form object and the template

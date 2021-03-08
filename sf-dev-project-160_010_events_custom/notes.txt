@@ -1,0 +1,6 @@
+To display the event info just avter creating the skeleton
+
+class VideoCreatedListener
+class VideoCreatedEvent
+
+php bin/console debug:event-dispatcher video.created.event

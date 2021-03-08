@@ -1,0 +1,12 @@
+index:
+   path: /home
+   controller: App\Controller\DefaultController::index
+
+# index: is the "index" method of the controller
+# path: <url basename>
+# controller : <controller path in server> :: <controller name>
+
+# Routes are defined in the file
+# my-dev-project\config\routes.yaml
+
+# We shall use anotations to define routes
